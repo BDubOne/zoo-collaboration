@@ -7,6 +7,9 @@ class Animal:
         self._species = species
         self.sound = sound
 
+    def __str__(self):
+        return f"{self._name} is a {self._species}"
+
 
     @property
     def get_name(self):
@@ -23,9 +26,20 @@ class Animal:
         print(f'{self._name} goes {self.sound}')
 
 class Aviary:
-    birds = {}
+    
+    def __init__(self, name):
+        self.name = name
+        self.birds = {}
+        self.total = len(self.birds)
 
-    #def __init__(self, )
+class ReptileEnclosure:
+    
+    def __init__(self, name):
+        self.name = name
+        self.reptiles = {}
+        self.total = len(self.reptiles)
+
+    
     
     
 
