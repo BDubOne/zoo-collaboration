@@ -1,5 +1,4 @@
 
-from birds import Bird
 
 class Animal:
     def __init__(self, name, species, sound="whazzzap"):
@@ -26,18 +25,31 @@ class Animal:
         print(f'{self._name} goes {self.sound}')
 
 class Aviary:
-    
+    birds = {} 
+
     def __init__(self, name):
         self.name = name
-        self.birds = {}
-        self.total = len(self.birds)
+        self.total = len(Aviary.birds)
+
+    def display_all_birds():
+        for index in Aviary.birds:
+            print(Aviary.birds[index])
 
 class ReptileEnclosure:
     
+    reptiles = {} 
+    
+
     def __init__(self, name):
         self.name = name
-        self.reptiles = {}
-        self.total = len(self.reptiles)
+        
+
+    def display_all_reptiles():
+        for index in ReptileEnclosure.reptiles:
+            print(ReptileEnclosure.reptiles[index])
+    
+    def Display_Reptile_Number():
+        print(len(ReptileEnclosure.reptiles))
 
     
     
